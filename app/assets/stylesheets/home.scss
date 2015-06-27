@@ -1,0 +1,33 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  background-image: image-url('wood13.jpg');
+  background-repeat: repeat;
+  background-position: top left;
+  background-attachment: fixed;
+}
+
+nav.top-bar{
+  height: 3rem;
+  li{
+    margin: 10px;
+    color: white;
+    text-transform: uppercase;
+
+    .fa-plus-square{
+      font-size: 30px;
+    }
+  }
+}
+
+#main-content{
+  background-color: white;
+  margin: 30px;
+  border-radius: 34px;
+
+  section.scroll-container{
+    padding: 30px;
+  }
+}
