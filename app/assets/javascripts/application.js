@@ -25,5 +25,7 @@
 $(document).foundation();
 
 $(function(){
-  React.render(React.createElement(BirthdayApp), document.getElementById('example'));
+  // React.render(React.createElement(BirthdayApp), document.getElementById('example'));
 })
+
+$(".pickadate").pickadate()

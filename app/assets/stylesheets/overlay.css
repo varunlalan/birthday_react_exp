@@ -10,8 +10,8 @@
 
 /* Overlay closing cross */
 .overlay .overlay-close {
-  width: 80px;
-  height: 80px;
+  width: 20px;
+  height: 20px;
   position: absolute;
   right: 20px;
   top: 20px;
