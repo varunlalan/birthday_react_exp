@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resource :birthdays
+  resources :birthdays
 
   root 'home#index'
 end

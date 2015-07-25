@@ -1,6 +1,6 @@
 class BirthdaysController < ApplicationController
   def index
-    Birthday.all.as_json
+    render json: Birthday.all.as_json
   end
 
   def create

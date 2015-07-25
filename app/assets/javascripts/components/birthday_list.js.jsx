@@ -1,48 +1,36 @@
-// var BirthdayList = React.createClass({displayName: "BirthdayList",
-//   render: function() {
-//     var createItem = function(arr) {
-//       name = arr[0]
-//       birthday = arr[1]
-//       return React.createElement("li", null, name + ', ' + birthday);
-//     };
-//     return React.createElement("ul", null, this.props.items.map(createItem));
-//   }
-// });
+BirthdayList = React.createClass({
+  render: function() {
+    return (
+      <div id='birthday-list'>
+        {
+          this.props.birthdays.map(function(birthday) {
+            return (<BirthdayRow birthday={birthday}/>)
+          })
+        }
+      </div>
+    );
+  }
+})
 
-// var BirthdayApp = React.createClass({displayName: "BirthdayApp",
-//   getInitialState: function() {
-//     return {items: [], name: '', birthday: ''};
-//   },
+BirthdayRow = React.createClass({
+deleteBirthday: function(){
+  var record_id = this.props.id
+  $.ajax({
+    url: "birthdays/record_id",
+    type: "DELETE"
+  })
+},
+  render: function(){
+    return (
+      <table border = "1" className="form-group">
+        <tr>
+          <td>{this.props.birthday.name}</td>
+          <td>{this.props.birthday.birthdate}</td>
+          <td> Edit </td>
+          <td className = "delete"> Delete </td>
+        </tr>
+      </table>
+    )
+  }
+})
 
-//   onChangeName: function(e) {
-//     this.setState({name: e.target.value});
-//   },
-
-//   onChangeBirthday: function(e) {
-//     this.setState({birthday: e.target.value});
-//   },
-
-//   handleSubmit: function(e) {
-//     e.preventDefault();
-//     this.state.items.push([this.state.name, this.state.birthday]);
-//     var nextItems = this.state.items
-//     this.setState({items: nextItems, name: '', birthday: ''});
-//   },
-
-//   render: function() {
-//     return (
-//       React.createElement("div", null,
-//         React.createElement("h3", null, "Birthday List"),
-//         React.createElement(BirthdayList, {items: this.state.items}),
-//         React.createElement("form", {onSubmit: this.handleSubmit},
-//           React.createElement("h1", null, "Add Birthday"),
-//           React.createElement("input", {onChange: this.onChangeName, value: this.state.name, placeholder: "Add Name"}),
-//           React.createElement("br"),
-//           React.createElement("input", {onChange: this.onChangeBirthday, value: this.state.birthday, placeholder: "dd/mm/yyyy"}),
-//           React.createElement("br"),
-//           React.createElement("button", null, 'Create Birthday')
-//         )
-//       )
-//     );
-//   }
-// });

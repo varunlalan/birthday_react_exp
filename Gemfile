@@ -13,7 +13,6 @@ gem "font-awesome-rails"
 gem 'foundation-rails'
 gem 'jquery-rails'
 gem 'pg'
-gem 'pickadate-rails'
 gem 'react-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc

@@ -11,9 +11,6 @@
  * file per style scope.
  *= require foundation
  *= require font-awesome
- *= require pickadate/classic
- *= require pickadate/classic.date
- *= require pickadate/classic.time
  *= require_tree .
  *= require_self
  */

@@ -18,14 +18,8 @@
 //= require components
 //= require modernizr.custom
 //= require foundation
-//= require pickadate/picker
-//= require pickadate/picker.date
-//= require pickadate/picker.time
 
-$(document).foundation();
 
 $(function(){
-  // React.render(React.createElement(BirthdayApp), document.getElementById('example'));
+  $(document).foundation();
 })
-
-$(".pickadate").pickadate()
