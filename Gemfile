@@ -1,6 +1,7 @@
-source 'http://production.s3.rubygems.org'
+source 'https://rubygems.org'
+ruby '2.6.3'
 
-gem 'rails', '4.2.2'
+gem 'rails'
 
 group :development, :test do
   gem 'byebug'
@@ -8,12 +9,12 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails'
 gem "font-awesome-rails"
 gem 'foundation-rails'
 gem 'jquery-rails'
 gem 'pg'
 gem 'react-rails'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
